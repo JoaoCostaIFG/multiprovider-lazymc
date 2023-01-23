@@ -56,3 +56,7 @@ the docker run call, e.g.:
 ```sh
 docker run -it -v server_data:/data joaocostaifg/lazymc-purpur:latest --add-modules=jdk.incubator.vector
 ```
+
+## License
+
+Just threw in there an [MIT license](./LICENSE) as usual.
