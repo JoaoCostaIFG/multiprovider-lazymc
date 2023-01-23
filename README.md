@@ -33,6 +33,17 @@ the EULA. Just edit the `eula.txt` file accordingly and restart the container.
 You can find multiple build for different Minecraft versions at the
 [project's DockerHub page](https://hub.docker.com/repository/docker/joaocostaifg/lazymc-purpur/general).
 
+### Environment variables
+
+The following environment variables are optional:
+
+- `MC_RAM_MIN` - the minimum amount of RAM reserved for the server. Defaults to
+  512 MB.
+- `MC_RAM_MAX` - the maximum amount of RAM the server can use. Defaults to 1G,
+  which is likely too conservative.
+- `JAVA_OPTS` - you can pass extra arguments for the Java virtual machine, e.g.,
+  `--add-modules=jdk.incubator.vector`
+
 ### Build options
 
 There some build options to tweak, e.g.,
@@ -43,19 +54,6 @@ There some build options to tweak, e.g.,
 - `LAZYMC_VERSION` - probably should just go with `latest`, but you can provide
   a version number, e.g., `0.2.7`
 - `MC_VERSION` - the Minecraft version.
-- `MC_RAM_MIN` - the minimum amount of RAM reserved for the server. Defaults to
-  512 MB.
-- `MC_RAM_MAX` - the maximum amount of RAM the server can use. Defaults to 1G,
-  which is likely too conservative.
-
-### Extra args
-
-You can pass extra arguments for the Java virtual machine by appending them to
-the docker run call, e.g.:
-
-```sh
-docker run -it -v server_data:/data joaocostaifg/lazymc-purpur:latest --add-modules=jdk.incubator.vector
-```
 
 ## License
 

@@ -17,10 +17,5 @@ wget "$url" -qO /lazymc && chmod +x /lazymc
 ARG MC_VERSION=1.19.3
 RUN wget https://api.purpurmc.org/v2/purpur/${MC_VERSION}/latest/download -qO /purpur
 
-ARG MC_RAM_MIN=512M
-ARG MC_RAM_MAX=1G
-ENV MC_RAM_MIN=${MC_RAM_MIN}
-ENV MC_RAM_MAX=${MC_RAM_MAX}
-
 ENTRYPOINT ["/run.sh"]
 
