@@ -3,6 +3,8 @@
 A docker image for Minecraft servers with Lazymc. It can use a variety of
 providers, currently:
 
+- [Fabric](https://fabricmc.net/) is a "lightweight, experimental modding
+  toolchain for Minecraft".
 - [PaperMC](https://github.com/PaperMC/Paper) is a "high performance Spigot fork
   that aims to fix gameplay and mechanics inconsistencies".
 - [Purpur](https://github.com/PurpurMC/Purpur) is a "drop-in replacement for
