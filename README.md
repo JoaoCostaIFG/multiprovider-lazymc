@@ -60,7 +60,6 @@ There some build options to tweak, e.g.,
 - Find a way to connect to the container and run commands on the server command
   line
 - Integrate more providers besides Purpur
-- Find cleaner way to install Lazymc
 
 ## License
 
