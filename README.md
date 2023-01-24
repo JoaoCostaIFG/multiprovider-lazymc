@@ -59,15 +59,19 @@ There some build options to tweak, e.g.,
 - `LAZYMC_VERSION` - probably should just go with `latest`, but you can provide
   a version number, e.g., `0.2.7`
 - `SERVER_PROVIDER` - which server to use. Currently, it supports
-  [purpur](https://github.com/PurpurMC/Purpur) and
-  [paper](https://github.com/PaperMC/Paper). Defaults to `purpur`
+  [purpur](https://github.com/PurpurMC/Purpur),
+  [paper](https://github.com/PaperMC/Paper), and
+  [fabric](https://fabricmc.net/). Defaults to `purpur`
 - `MC_VERSION` - the Minecraft version.
 
 ## TODO
 
+- Use non-root user
 - Find a way to connect to the container and run commands on the server command
   line
-- Use non-root user
+- Add support for forge:
+  - How to download the latest version (maybe parse html)
+- What to do about the libraries directory of fabric and forge
 
 ## License
 
