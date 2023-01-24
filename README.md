@@ -55,6 +55,13 @@ There some build options to tweak, e.g.,
   a version number, e.g., `0.2.7`
 - `MC_VERSION` - the Minecraft version.
 
+## TODO
+
+- Find a way to connect to the container and run commands on the server command
+  line
+- Integrate more providers besides Purpur
+- Find cleaner way to install Lazymc
+
 ## License
 
 Just threw in there an [MIT license](./LICENSE) as usual.
