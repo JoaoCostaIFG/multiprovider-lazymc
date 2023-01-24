@@ -1,10 +1,13 @@
-# Purpur minecraft server with Lazymc
+# Docker multi-provider minecraft server with Lazymc
 
-A docker image for Purpur Minecraft server with Lazymc.
+A docker image for Minecraft servers with Lazymc. It can use a variety of
+providers, currently:
 
-[Purpur](https://github.com/PurpurMC/Purpur) is a "drop-in replacement for Paper
-servers designed for configurability, and new fun and exciting gameplay
-features".
+- [PaperMC](https://github.com/PaperMC/Paper) is a "high performance Spigot fork
+  that aims to fix gameplay and mechanics inconsistencies".
+- [Purpur](https://github.com/PurpurMC/Purpur) is a "drop-in replacement for
+  Paper servers designed for configurability, and new fun and exciting gameplay
+  features".
 
 [Lazymc](https://github.com/timvisee/lazymc) puts your Minecraft server to rest
 when idle, and wakes it up when players connect.
@@ -53,13 +56,16 @@ There some build options to tweak, e.g.,
   or `x64-static`
 - `LAZYMC_VERSION` - probably should just go with `latest`, but you can provide
   a version number, e.g., `0.2.7`
+- `SERVER_PROVIDER` - which server to use. Currently, it supports
+  [purpur](https://github.com/PurpurMC/Purpur) and
+  [paper](https://github.com/PaperMC/Paper). Defaults to `purpur`
 - `MC_VERSION` - the Minecraft version.
 
 ## TODO
 
 - Find a way to connect to the container and run commands on the server command
   line
-- Integrate more providers besides Purpur
+- Use non-root user
 
 ## License
 
