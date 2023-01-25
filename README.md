@@ -66,11 +66,15 @@ There some build options to tweak, e.g.,
 
 ## TODO
 
-- Find a way to connect to the container and run commands on the server command
-  line
+- ~~Find a way to connect to the container and run commands on the server
+  command line~~:
+  - Ok,
+    [docker attach](https://docs.docker.com/engine/reference/commandline/attach/)
+    exists
 - Add support for forge:
   - How to download the latest version (maybe parse html)
-- What to do about the libraries directory of fabric and forge
+- What to do about the libraries directory of fabric and forge:
+  - Probably should just stay in the maps directory
 
 ## License
 
