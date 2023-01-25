@@ -66,7 +66,6 @@ There some build options to tweak, e.g.,
 
 ## TODO
 
-- Use non-root user
 - Find a way to connect to the container and run commands on the server command
   line
 - Add support for forge:
