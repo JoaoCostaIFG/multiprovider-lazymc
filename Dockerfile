@@ -5,6 +5,7 @@ EXPOSE 25565/udp
 
 WORKDIR /data
 
+RUN useradd --uid 25565 -s /sbin/nologin --system -U minecraft
 RUN apt update && apt install -y curl jq
 
 COPY . /
@@ -17,7 +18,6 @@ ARG SERVER_PROVIDER=purpur MC_VERSION=1.19.3
 ENV SERVER_PROVIDER=${SERVER_PROVIDER} MC_VERSION=${MC_VERSION}
 RUN /install_server.sh
 
-RUN useradd --uid 25565 -s /sbin/nologin --system -U minecraft
 USER minecraft
 
 ENTRYPOINT ["/run.sh"]
