@@ -22,7 +22,7 @@ Inspired by
 Something along these lines should get you started:
 
 ```sh
-docker run -p 25565:25565 -p 25566:25566 -it -v (pwd)/server_data:/data joaocostaifg/lazymc-purpur:1.19.3-lazymc0.2.7x64
+docker run -p 25565:25565 -p 25566:25566 -it -v (pwd)/server_data:/data joaocostaifg/multiprovider-lazymc:1.19.3-lazymc0.2.7x64-purpur
 ```
 
 ## Usage details
@@ -30,13 +30,13 @@ docker run -p 25565:25565 -p 25566:25566 -it -v (pwd)/server_data:/data joaocost
 Just bind-mount your Minecraft server folder to /data:
 
 ```sh
-docker run -v https://github.com/Okazakee/mcserver-lazymc-docker joaocostaifg/lazymc-purpur:latest
+docker run -v https://github.com/Okazakee/mcserver-lazymc-docker joaocostaifg/multiprovider-lazymc:1.19.3-lazymc0.2.7x64-purpur
 ```
 
 When running the server for the first time, you'll likelly be prompted to accept
 the EULA. Just edit the `eula.txt` file accordingly and restart the container.
 You can find multiple build for different Minecraft versions at the
-[project's DockerHub page](https://hub.docker.com/repository/docker/joaocostaifg/lazymc-purpur/general).
+[project's DockerHub page](https://hub.docker.com/repository/docker/joaocostaifg/multiprovider-lazymc/general).
 
 ### Environment variables
 
