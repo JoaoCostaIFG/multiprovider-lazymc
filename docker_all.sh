@@ -5,8 +5,8 @@ lazymc_version="0.2.7"
 
 echo "LazyMC version: $lazymc_version"
 
-for server_provider in purpur paper fabric; do
-	for mc_version in 1.14.4 1.15.2 1.16.5 1.17.1 1.18.2 1.19.3; do
+for mc_version in 1.14.4 1.15.2 1.16.5 1.17.1 1.18.2 1.19.3; do
+	for server_provider in purpur paper fabric; do
 		echo "Minecraft version: $mc_version"
 
 		# aarch64 armv7 x64 x64-static
