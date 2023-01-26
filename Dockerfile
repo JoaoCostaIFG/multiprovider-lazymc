@@ -5,7 +5,8 @@ EXPOSE 25565/udp
 
 WORKDIR /data
 
-RUN useradd --uid 25565 -s /sbin/nologin --system -U minecraft
+RUN groupadd --gid 25565 --system minecraft && \
+  useradd --uid 25565 -g minecraft -s /sbin/nologin --system minecraft
 RUN apt update && apt install -y curl jq
 
 COPY . /
