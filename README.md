@@ -92,10 +92,6 @@ There some build options to tweak, e.g.,
   - Ok,
     [docker attach](https://docs.docker.com/engine/reference/commandline/attach/)
     exists
-- Add support for forge:
-  - How to download the latest version (maybe parse html)
-- What to do about the libraries directory of fabric and forge:
-  - Probably should just stay in the maps directory
 
 ## License
 
