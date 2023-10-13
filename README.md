@@ -79,19 +79,25 @@ There some build options to tweak, e.g.,
   or `x64-static`
 - `LAZYMC_VERSION` - probably should just go with `latest`, but you can provide
   a version number, e.g., `0.2.7`
-- `SERVER_PROVIDER` - which server to use. Currently, it supports
-  [purpur](https://github.com/PurpurMC/Purpur),
-  [paper](https://github.com/PaperMC/Paper), and
-  [fabric](https://fabricmc.net/). Defaults to `purpur`
+- `SERVER_PROVIDER` - which server to use. One of (defaults to `purpur`):
+  - [Mohist](https://mohistmc.com/)
+  - [Fabric](https://fabricmc.net/)
+  - [Forge](https://files.minecraftforge.net/net/minecraftforge/forge/)
+  - [Catserver](https://catmc.org/)
+  - [Paper](https://github.com/PaperMC/Paper)
+  - [Purpur](https://github.com/PurpurMC/Purpur)
+  - [Sponge](https://spongepowered.org/)
+  - [Vanilla](https://www.minecraft.net/)
+  - [Snapshot](https://www.minecraft.net/)
 - `MC_VERSION` - the Minecraft version.
 
-## TODO
+## Accessing the server command line
 
-- ~~Find a way to connect to the container and run commands on the server
-  command line~~:
-  - Ok,
-    [docker attach](https://docs.docker.com/engine/reference/commandline/attach/)
-    exists
+[Docker attach](https://docs.docker.com/engine/reference/commandline/attach/) exists and helps a lot here:
+
+```sh
+docker attach <container-id>
+```
 
 ## License
 
