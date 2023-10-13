@@ -5,7 +5,7 @@ set -eu
 if [ ! -e eula.txt ] || grep -q 'eula=false' eula.txt; then
 	# generate EULA stuff
 	java -jar /server
-	exit 1
+	sed -i 's/eula=false/eula=true/' eula.txt
 fi
 
 if [ ! -e lazymc.toml ]; then

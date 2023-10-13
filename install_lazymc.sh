@@ -10,4 +10,4 @@ else
 	url="https://github.com/timvisee/lazymc/releases/download/v${LAZYMC_VERSION}/lazymc-v${LAZYMC_VERSION}-linux-${CPU_ARCHITECTURE}"
 fi
 
-curl "$url" -Lo /lazymc && chmod +x /lazymc
+curl -s "$url" -Lo /lazymc && chmod +x /lazymc

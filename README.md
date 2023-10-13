@@ -3,26 +3,47 @@
 A docker image for Minecraft servers with Lazymc. It can use a variety of
 providers, currently:
 
-- [Fabric](https://fabricmc.net/) is a "lightweight, experimental modding
-  toolchain for Minecraft".
-- [PaperMC](https://github.com/PaperMC/Paper) is a "high performance Spigot fork
+- [Mohist](https://mohistmc.com/) - "Minecraft Forge Server software implementing Paper/Spigot/Bukkit API".
+- [Fabric](https://fabricmc.net/) - "lightweight, experimental modding toolchain for Minecraft".
+- [Forge](https://files.minecraftforge.net/net/minecraftforge/forge/) - the popular minecraft modding framework.
+- [Catserver](https://catmc.org/) - "A high performance and high compatibility 1.12.2/1.16.5/1.18.2 version Forge+Bukkit+Spigot server)".
+- [Paper](https://github.com/PaperMC/Paper) - "High performance Spigot fork
   that aims to fix gameplay and mechanics inconsistencies".
-- [Purpur](https://github.com/PurpurMC/Purpur) is a "drop-in replacement for
+- [Purpur](https://github.com/PurpurMC/Purpur) - "Drop-in replacement for
   Paper servers designed for configurability, and new fun and exciting gameplay
   features".
+- [Sponge](https://spongepowered.org/) - "A community-driven open source Minecraft: Java Edition modding platform".
+- [Vanilla](https://www.minecraft.net/) - the original Minecraft server.
+- [Snapshot](https://www.minecraft.net/) - the Minecraft snapshot versions.
 
 [Lazymc](https://github.com/timvisee/lazymc) puts your Minecraft server to rest
 when idle, and wakes it up when players connect.
 
 Inspired by
-[mcserver-lazymc-docker](https://github.com/Okazakee/mcserver-lazymc-docker)
+[mcserver-lazymc-docker](https://github.com/Okazakee/mcserver-lazymc-docker): but doesn't need to download the jars everytime.
+Enabled by [serverjars.com](https://serverjars.com).
 
 ## Quick start
 
+I publish some builds for common Minecraft versions at the projects
+[DockerHub page](https://hub.docker.com/repository/docker/joaocostaifg/multiprovider-lazymc/general).
 Something along these lines should get you started:
 
 ```sh
 docker run -p 25565:25565 -p 25566:25566 -it -v (pwd)/server_data:/data joaocostaifg/multiprovider-lazymc:1.19.3-lazymc0.2.7x64-purpur
+```
+
+If want to fully customize the server, you can build your own image. For
+example, to build a server with the latest version of Minecraft PaperMC:
+
+```sh
+docker build -t my-minecraft-server --build-arg SERVER_PROVIDER=paper --build-arg MC_VERSION=latest .
+```
+
+Then run it using:
+
+```sh
+docker run --user "$(id -u $"(whoami)")" -v (pwd)/data:/data -p 25565:25565 -it my-minecraft-server
 ```
 
 ## Usage details

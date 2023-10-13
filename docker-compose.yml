@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  minecraft:
+    image: joaocostaifg/lazymc-purpur:1.19.3-lazymc0.2.7x64
+    container_name: minecraft
+    volumes:
+      - /home/joao/Documents/Projs/minecraft_server/server_data:/data
+    ports:
+      - "25565:25565"
+      - "25566:25566"
+    networks:
+      - testing
+    restart: unless-stopped
+
+networks:
+  testing:
+    driver: bridge
