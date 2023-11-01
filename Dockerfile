@@ -19,7 +19,5 @@ ARG SERVER_PROVIDER=purpur MC_VERSION=latest
 ENV SERVER_PROVIDER=${SERVER_PROVIDER} MC_VERSION=${MC_VERSION}
 RUN /install_server.sh
 
-USER minecraft
-
-ENTRYPOINT ["/run.sh"]
+ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
 
